@@ -1,4 +1,9 @@
-// Object property access
+// Concept: Dynamic Keys
+// ================
+
+// In JavaScript, objects can have dynamic keys, which are keys that are not known until runtime. This is useful when you want to create an object with keys that are based on user input or other dynamic data.
+
+// Example
 const person = { name: "Sartaj" };
 console.log(person.name);
 person.age = 20;
@@ -39,11 +44,10 @@ updateState("data", [{ id: 1, name: "sartaj" }, { id: 2, name: "aquib" }]);
 updateState("prototype", []);
 console.log({ ...state });
 
-
-
 // Destructuring
 const { data,loading,error } = state;
 if(loading){
     console.log("Loading...")
     data.map((item) => console.log(item.name));
 }
+
