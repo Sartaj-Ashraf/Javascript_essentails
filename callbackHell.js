@@ -12,6 +12,12 @@
 // However, this can be hard to read and understand, especially if there are many more headings to change. So instead, we can use callbacks to make the code more linear and easier to read.
 
 // The way to do this is to use a callback function for each setTimeout, like so:
+
+const first =document.querySelector(".first")
+const second =document.querySelector(".second")
+const third =document.querySelector(".third")
+const btn =document.querySelector(".btn")
+
 btn.addEventListener("click", () => {
   setTimeout(() => {
     first.style.color = "red";
