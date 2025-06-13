@@ -1,3 +1,14 @@
+// Async Await Concept
+// ===================
+
+// Async Await is a way to write asynchronous code that is easier to read and understand. It is a syntax sugar on top of Promises. It allows us to write asynchronous code that looks like synchronous code.
+
+// In this example, we are going to use two functions: getUser and getArticles. These functions return Promises. We are going to use Async Await to write a function that will call these functions and log the result to the console.
+
+// getUser function takes a name and returns a Promise that resolves with the user object if the user is found, or rejects with an error if the user is not found.
+
+// getArticles function takes a userId and returns a Promise that resolves with the articles array if the articles are found, or rejects with an error if the articles are not found.
+
 const users = [
   {
     id: 1,
@@ -55,12 +66,16 @@ function getArticles(userId) {
     }
   });
 }
+
+// Async Await syntax
 const getData = async () => {
   const user = await getUser("shahid");
   const article = await getArticles(user.id);
   console.log(article);
 };
 getData();
+
+// Promise syntax with .then chaining
 // getUser("shahid")
 //   .then((user) => getArticles(user.id)
 //   .then((article)=>console.log(article)))
